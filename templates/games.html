@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>야구 실시간 경기</title>
+</head>
+<body>
+    <h2>야구 실시간 경기 현황 ({{now}})</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>팀1</th><th>팀2</th><th>스코어</th><th>진행 상황</th>
+        </tr>
+        {% for game in games %}
+        <tr>
+            <td>{{game.team1}}</td>
+            <td>{{game.team2}}</td>
+            <td>{{game.score}}</td>
+            <td>{{game.status}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
